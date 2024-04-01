@@ -16,8 +16,8 @@ return new class extends Migration
             $table->foreignId('user_id')->nullable()->constrained();
             $table->string('name');
             $table->boolean('is_completed')->default(false);
-            $table->boolean('is_deleted')->default(false);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
