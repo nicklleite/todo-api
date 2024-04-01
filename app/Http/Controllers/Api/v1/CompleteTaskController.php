@@ -14,7 +14,7 @@ class CompleteTaskController extends Controller
      */
     public function __invoke(Request $request, Task $task)
     {
-        $task->is_completed = (int) $request->is_completed;
+        $task->is_completed = $request->is_completed;
         $task->save();
         return TaskResource::make($task);
     }
