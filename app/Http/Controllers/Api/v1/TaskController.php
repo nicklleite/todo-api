@@ -15,7 +15,7 @@ class TaskController extends Controller
      */
     public function index()
     {
-        return TaskResource::collection(Task::where('deleted_at', null)->get());
+        return TaskResource::collection(Task::where('deleted_at', null)->orderBy('created_at', 'desc')->get());
     }
 
     /**
