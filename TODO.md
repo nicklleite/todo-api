@@ -1,0 +1,1 @@
+* Implementar testes unitários e de funcionalidade (PEST e GitHub Actions)
